@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDW 6_20220140141</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/_3.jpg">
+</head>
+
+<body>
+
+    <div class="song-container">
+        <div class="video-container">
+            <video id="bg-video" muted loop>
+                <source src="assets/kikikiki.mp4" type="video/webm"> Your browser doesn't support the video. 
+            </video>
+        </div>
+        <img src="assets/download (1).jpg" alt="Song Cover"
+        class="song-cover">
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="song-container">
+        <div class="song-info">
+            <h2 class="song-title">DJ SAH REMIX </h2>
+            <p class="song-artist">SARAH SUHAIRI RACINGG</p>
+            <div class="progress-bar-container">
+                <div class="progress-bar">
+                    <div class="progress-bar-fill" id="progress-bar-fill"></div>
+                </div>
+                <span class="time-display">0:00 / 0:00</span> 
+            </div>
+            <div class="play-controls">
+                <button class="play-button" onclick="playPause()">
+                    <i class="fas fa-play"></i>
+                </button>
+                <button class="pause-button" onclick="playPause()">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+        </div>
+        <audio src="assets/DJ+SAH+REMIX+SARAH+SUHAIRI+VIRAL+TIKTOK+TERBARU+2024++!!.mp3" class="song-track"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

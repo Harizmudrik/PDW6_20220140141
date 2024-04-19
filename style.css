@@ -1,0 +1,167 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+  
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+  
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image: url("assets/download\ \(1\).jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: move 5s linear infinite;
+}
+  
+@keyframes move {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(10px, 10px);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+}
+  
+.overlay::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-image: radial-gradient(white, rgba(255, 255, 255, 0));
+    opacity: 0.2;
+}
+  
+.song-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    max-width: 320px; /* Untuk mengatur lebar si containernya (gambar dan element)*/
+    padding: 20px;
+    background-color: #0e1324;
+    border-radius: 5px;
+    box-shadow: 0px 0px 50px hsl(256, 45%, 57%);
+    z-index: 1;
+    overflow: visible;
+}
+  
+.song-cover {
+    position: relative;
+    width: 100%; /*Mengatur lebar gambar*/
+    max-width: 100%;    /*Mengatur tinggi gambar*/
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+  
+.song-info {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+.song-title {
+    margin: 0;
+    font-size: 24px;    /*Mengatur ukuran font judul*/
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+  
+.song-artist {
+    margin: 0;
+    font-size: 18px;    /*Mengatur ukuran font nama artist*/
+    color: #888;
+}
+  
+.progress-bar-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+  
+.progress-bar {
+    flex-grow: 1;
+    height: 8px;    /*Mengatur tinggi progress bar*/
+    background-color: #ffffff;
+    border-radius: 5px;
+    position: relative;
+}
+  
+.progress-bar-fill {
+    height: 100%;
+    background-color: hsl(256, 45%, 57%);
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+.time-display {
+    font-size: 14px;    /*Mengatur ukuran font waktu*/
+    color: #ffffff;
+    margin-left: 5px;
+}
+  
+.play-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+  
+.play-button,
+.pause-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.5s ease;
+}
+  
+.pause-button {
+    display: none;
+}
+  
+.play-button:hover,
+.pause-button:hover {
+    background-color: hsl(256, 45%, 57%);
+}
